@@ -9,3 +9,4 @@ _esy/
 reason-native-boilerplate.install
 .DS_Store
 *.install
+.idea
