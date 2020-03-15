@@ -1,0 +1,53 @@
+{
+  "name": "reason-native-boilerplate",
+  "version": "0.0.0",
+  "description": "My Project",
+  "esy": {
+    "build": "dune build -p <PACKAGE_NAME>",
+    "buildDev": "dune build @all",
+    "release": {
+      "releasedBinaries": [
+        "ReasonNativeBoilerplateApp.exe"
+      ]
+    }
+  },
+  "buildDirs": {
+    "test": {
+      "require": [
+        "reason-native-boilerplate.lib"
+      ],
+      "main": "TestReasonNativeBoilerplate",
+      "name": "TestReasonNativeBoilerplate.exe"
+    },
+    "library": {
+      "name": "reason-native-boilerplate.lib",
+      "namespace": "ReasonNativeBoilerplate"
+    },
+    "executable": {
+      "require": [
+        "reason-native-boilerplate.lib",
+        "base",
+        "console.lib"
+      ],
+      "main": "ReasonNativeBoilerplateApp",
+      "name": "ReasonNativeBoilerplateApp.exe"
+    }
+  },
+  "scripts": {
+    "pesy": "bash -c 'env PESY_MODE=update pesy'",
+    "test": "esy x TestReasonNativeBoilerplate.exe"
+  },
+  "dependencies": {
+    "@esy-ocaml/reason": "*",
+    "@opam/base": "v0.13.1",
+    "@opam/dune": ">=1.6.0",
+    "@reason-native/console": "^0.1.0",
+    "ocaml": "^4.4.0"
+  },
+  "devDependencies": {
+    "ocaml": "4.7.1004",
+    "refmterr": "*",
+    "pesy": "*",
+    "@opam/merlin": "*"
+  }
+}
