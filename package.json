@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "My Project",
   "esy": {
-    "build": "dune build -p <PACKAGE_NAME>",
+    "build": "dune build -p #{salf.name}",
     "buildDev": "dune build @all",
     "release": {
       "releasedBinaries": [
