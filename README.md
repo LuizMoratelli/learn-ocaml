@@ -15,4 +15,6 @@ esy dune build --watch
 esy x ReasonNativeBoilerplateApp.exe
 // or
 esy '{#self.target_dir}/default/executable/ReasonNativeBoilerplateApp.exe'
+//or
+esy x dune exec ReasonNativeBoilerplateApp.exe
 ```
